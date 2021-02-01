@@ -39,9 +39,11 @@ User.init(
         validate: {
           len: [4]
         }
+      },
+      image: {
+        type: DataTypes.STRING
       }
     },
-
     // TABLE CONFIGURATION OPTIONS GO HERE (https://sequelize.org/v5/manual/models-definition.html#configuration))
     {
         hooks: {
