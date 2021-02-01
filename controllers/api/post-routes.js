@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
       order: [['created_at', 'DESC']],
       attributes: [
         'id',
-        'post_url',
+        'post',
         'title',
         'created_at',
         [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -45,7 +45,7 @@ router.get('/:id', (req, res) => {
       },
       attributes: [
         'id',
-        'post_url',
+        'post',
         'title',
         'created_at',
         [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -81,10 +81,10 @@ router.get('/:id', (req, res) => {
 
 // Create new post
 router.post('/', withAuth, (req, res) => {
-    // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
+    // expects {title: 'Taskmaster goes public!', post: 'https://taskmaster.com/press', user_id: 1}
     Post.create({
       title: req.body.title,
-      post_url: req.body.post_url,
+      post: req.body.post,
       user_id: req.session.user_id
     })
       .then(dbPostData => res.json(dbPostData))
