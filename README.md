@@ -18,7 +18,7 @@ A CMS-style blog site that allows users to create a user account, log into their
 ![Tech Blog screenshot](./public/images/tech-blog-screenshot.jpg "Application Screenshot")
 
 ## Deployed Application
-https://tech-blog.herokuapp.com/
+https://tech-blog-h.herokuapp.com/
 
 ## Built With
 * JavaScript
