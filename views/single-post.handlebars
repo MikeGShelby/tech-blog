@@ -3,12 +3,13 @@
 {{#if loggedIn}}
 <form class="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea name="comment-body" placeholder="Type Comment Here"></textarea>
   </div>
 
   <div>
-    <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
+    <button type="submit">POST COMMENT</button>
+    <button type="button" class="upvote-btn"><i class="fas fa-thumbs-up"></i></button>
+    {{post.vote_count}} {{format_plural "like" post.vote_count}}
   </div>
 </form>
 {{/if}}

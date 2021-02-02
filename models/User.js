@@ -40,7 +40,7 @@ User.init(
           len: [4]
         }
       },
-      image: {
+      user_image: {
         type: DataTypes.STRING
       }
     },
