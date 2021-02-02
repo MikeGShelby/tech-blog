@@ -1,11 +1,14 @@
 <article class="post">
-  <div class="title">
-    <a href="{{post}}" target="_blank">{{title}}</a>
-      <p>{{post}}</p>
-  </div>
+  {{!-- <div class="title"> --}}
+    <h2 class="title">{{title}}</h2>
+    <div class="post-text">
+      {{post}}
+    </div>
+
+  {{!-- </div> --}}
   <div class="meta">
     {{vote_count}} {{format_plural "like" vote_count}} by
-    <img class="user-image" src="/{{user.image}}">
+    <img class="user-image" src="/{{user.user_image}}">
 
     {{user.username}} on {{format_date created_at}}
     |

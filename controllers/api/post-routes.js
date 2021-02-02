@@ -21,12 +21,12 @@ router.get('/', (req, res) => {
           attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
           include: {
             model: User,
-            attributes: ['username', 'image']
+            attributes: ['username', 'user_image']
           }
         },
         {
           model: User,
-          attributes: ['username', 'image']
+          attributes: ['username', 'user_image']
         }
       ]
     })
@@ -57,12 +57,12 @@ router.get('/:id', (req, res) => {
           attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
           include: {
             model: User,
-            attributes: ['username', 'image']
+            attributes: ['username', 'user_image']
           }
         },
         {
           model: User,
-          attributes: ['username', 'image']
+          attributes: ['username', 'user_image']
         }
       ]
     })

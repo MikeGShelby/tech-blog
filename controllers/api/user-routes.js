@@ -64,7 +64,7 @@ router.post('/', (req, res) => {
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
-      image: 'images/default-user-image.jpg'
+      user_image: 'images/default-user-image.jpg'
     })
     .then(dbUserData => {
       req.session.save(() => {
