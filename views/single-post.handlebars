@@ -1,22 +1,26 @@
-{{> post-info-single post }}
+<section class="single-post-layout">
 
-{{#if loggedIn}}
-  <form class="comment-form">
-    <div>
-      <textarea name="comment-body" placeholder="Type Comment Here"></textarea>
-    </div>
+  {{> post-info-single post }}
 
-    <div>
-      <button type="submit">POST COMMENT</button>
-      <button type="button" class="upvote-btn"><i class="fas fa-thumbs-up"></i></button>
-      {{post.vote_count}} {{format_plural "like" post.vote_count}}
-    </div>
-  </form>
-{{/if}}
+  {{#if loggedIn}}
+    <form class="comment-form">
+      <div>
+        <textarea name="comment-body" placeholder="Type Comment Here"></textarea>
+      </div>
 
-{{> comments post.comments}}
+      <div>
+        <button type="submit">POST COMMENT</button>
+        <button type="button" class="upvote-btn"><i class="fas fa-thumbs-up"></i></button>
+        {{post.vote_count}} {{format_plural "like" post.vote_count}}
+      </div>
+    </form>
+  {{/if}}
 
-{{#if loggedIn}}
-  <script src="/javascript/comment.js"></script>
-  <script src="/javascript/upvote.js"></script>
-{{/if}}
+  {{> comments post.comments}}
+
+  {{#if loggedIn}}
+    <script src="/javascript/comment.js"></script>
+    <script src="/javascript/upvote.js"></script>
+  {{/if}}
+
+</section>

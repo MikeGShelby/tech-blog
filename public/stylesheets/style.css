@@ -9,6 +9,33 @@ body, html {
   color: #333;
 }
 
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER FOR ALL PAGES */
+header {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1%;
+}
+
+header h1 {
+  font-size: 1em;
+}
+
+/* MAIN BODY FOR ALL PAGES */
+main {
+  flex: 1;
+}
+
 
 /* USER DATA */
 .user-image {
@@ -42,8 +69,13 @@ button:hover {
 }
 
 /* HOMEPAGE POSTS */
+.multi-post-layout {
+  padding: 2% 0%;
+}
+
 .post-list {
   padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -58,9 +90,9 @@ button:hover {
 
 .post-card {
   display: grid;
-  grid-template-columns:375px;
-  grid-template-rows: 210px 180px;
-  grid-template-areas:"image" "text";
+  grid-template-columns:330px;
+  grid-template-rows: 210px 180px 100px;
+  grid-template-areas:"image" "text" "user";
   font-family: var(--cta-font);
   color: rgb(90, 89, 89);
   background-color:white;
@@ -70,10 +102,11 @@ button:hover {
   box-shadow: .2px .2px 2px rgba(0,0,0,0.6);
   transform: scale(1);
   transition: box-shadow .2s, transform .2s;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .post-card:hover {
+  color: rgb(90, 89, 89);
   box-shadow: 1px 1px 8px rgba(0,0,0,0.3);
   transform: scale(1.007);
 }
@@ -87,10 +120,15 @@ button:hover {
 .post-card-text {
   grid-area: text;
   padding: 0px 20px;
+  overflow: hidden;
 }
 
+.post-card-user {
+  grid-area: user;
+  padding: 30px 20px;
+}
 
-
+/* SINGLE-POST PAGE */
 
 textarea, input {
   padding: .5%;
@@ -116,29 +154,7 @@ form label {
   display: block;
 }
 
-.wrapper {
-  width: 100%;
-  min-height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1%;
-}
-
-header h1 {
-  font-size: 1em;
-}
-
-main {
-  flex: 1;
+.single-post-layout {
   padding: 2% 15%;
 }
 
