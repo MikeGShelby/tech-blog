@@ -1,17 +1,17 @@
-{{> post-info post }}
+{{> post-info-single post }}
 
 {{#if loggedIn}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body" placeholder="Type Comment Here"></textarea>
-  </div>
+  <form class="comment-form">
+    <div>
+      <textarea name="comment-body" placeholder="Type Comment Here"></textarea>
+    </div>
 
-  <div>
-    <button type="submit">POST COMMENT</button>
-    <button type="button" class="upvote-btn"><i class="fas fa-thumbs-up"></i></button>
-    {{post.vote_count}} {{format_plural "like" post.vote_count}}
-  </div>
-</form>
+    <div>
+      <button type="submit">POST COMMENT</button>
+      <button type="button" class="upvote-btn"><i class="fas fa-thumbs-up"></i></button>
+      {{post.vote_count}} {{format_plural "like" post.vote_count}}
+    </div>
+  </form>
 {{/if}}
 
 {{> comments post.comments}}

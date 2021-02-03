@@ -1,11 +1,10 @@
-<article class="post">
-  {{!-- <div class="title"> --}}
+{{!-- <article class="post-small">
+  <img src="/{{post_image}}" class="post-image">
+
     <h2 class="title">{{title}}</h2>
     <div class="post-text">
       {{post}}
     </div>
-
-  {{!-- </div> --}}
   <div class="meta">
     {{vote_count}} {{format_plural "like" vote_count}} by
     <img class="user-image" src="/{{user.user_image}}">
@@ -13,5 +12,18 @@
     {{user.username}} on {{format_date created_at}}
     |
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-</div>
-</article>
+  </div>
+</article> --}}
+
+
+<a href="/post/{{id}}" class="post-card">
+
+      <img src="{{post_image}}" class="post-card-image">
+
+      <div class="post-card-text">
+        <h3 class="post-title">{{title}}</h3>
+        <p>{{post}}</p>
+      </div>
+
+</a>
+

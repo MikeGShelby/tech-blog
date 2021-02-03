@@ -1,0 +1,16 @@
+<article class="post-full">
+  <img src="/{{post_image}}" class="post-image">
+
+    <h2 class="title">{{title}}</h2>
+    <div class="post-text">
+      {{post}}
+    </div>
+  <div class="meta">
+    {{vote_count}} {{format_plural "like" vote_count}} by
+    <img class="user-image" src="/{{user.user_image}}">
+
+    {{user.username}} on {{format_date created_at}}
+    |
+    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+</div>
+</article>
