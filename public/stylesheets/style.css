@@ -93,40 +93,44 @@ button:hover {
   grid-template-columns:330px;
   grid-template-rows: 210px 180px 100px;
   grid-template-areas:"image" "text" "user";
-  font-family: var(--cta-font);
   color: rgb(90, 89, 89);
   background-color:white;
   text-align: left;
   margin: 20px;
   text-decoration: none;
-  /* box-shadow: .2px .2px 2px rgba(0,0,0,0.6); */
-  transform: scale(1);
-  transition: box-shadow .2s, transform .2s;
-  /* overflow: hidden; */
 }
 
 .post-card:hover {
   color: rgb(90, 89, 89);
-  box-shadow: 1px 1px 6px rgba(0,0,0,0.3);
-  transform: scale(1.007);
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.35);
+}
+
+.image-section {
+  overflow: hidden;
 }
 
 .post-card-image {
   width: 100%;
   height: 100%;
+  transform: scale(1);
+  transition: transform 1s;
   object-fit: cover;
-  transition: object-fit 1s;
 }
 
 .post-card:hover .post-card-image {
-  object-fit:none;
+  transform: scale(1.2);
 }
-
 
 .post-card-text {
   grid-area: text;
   padding: 0px 20px;
   overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.post-card-text h3 {
+  font-weight: 700;
 }
 
 .post-card-user {

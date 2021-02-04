@@ -13,7 +13,7 @@ const postData = [
     Proident elit cupidatat veniam mollit ipsum cillum pariatur. Aliqua ullamco consectetur officia culpa cupidatat consectetur nisi occaecat enim Lorem pariatur magna mollit ut. Ut magna sunt amet aute fugiat. Laboris fugiat minim duis ad sit consequat voluptate non veniam laboris ullamco eu. Mollit aute est elit et amet consectetur sit amet laboris consequat nisi laborum ipsum.
 
     Laboris commodo id duis voluptate do fugiat quis aliqua. Duis commodo sit officia occaecat est esse non sit ipsum. Velit minim id sunt sunt ex aliqua officia deserunt dolor adipisicng incididunt ad. Culpa nostrud do sunt quis aliqua duis. Proident ullamco quis do quis irure excepteur ullamco.`,
-    post_image: 'images/post-image-default.jpg',
+    post_image: 'images/post-image-4',
     user_id: 1
   },
   {
@@ -28,7 +28,7 @@ const postData = [
     Proident elit cupidatat veniam mollit ipsum cillum pariatur. Aliqua ullamco consectetur officia culpa cupidatat consectetur nisi occaecat enim Lorem pariatur magna mollit ut. Ut magna sunt amet aute fugiat. Laboris fugiat minim duis ad sit consequat voluptate non veniam laboris ullamco eu. Mollit aute est elit et amet consectetur sit amet laboris consequat nisi laborum ipsum.
 
     Laboris commodo id duis voluptate do fugiat quis aliqua. Duis commodo sit officia occaecat est esse non sit ipsum. Velit minim id sunt sunt ex aliqua officia deserunt dolor adipisicng incididunt ad. Culpa nostrud do sunt quis aliqua duis. Proident ullamco quis do quis irure excepteur ullamco.`,
-    post_image: 'images/post-image-default.jpg',
+    post_image: 'images/post-image-2',
     user_id: 1
   },
   {
@@ -43,7 +43,7 @@ const postData = [
     Proident elit cupidatat veniam mollit ipsum cillum pariatur. Aliqua ullamco consectetur officia culpa cupidatat consectetur nisi occaecat enim Lorem pariatur magna mollit ut. Ut magna sunt amet aute fugiat. Laboris fugiat minim duis ad sit consequat voluptate non veniam laboris ullamco eu. Mollit aute est elit et amet consectetur sit amet laboris consequat nisi laborum ipsum.
 
     Laboris commodo id duis voluptate do fugiat quis aliqua. Duis commodo sit officia occaecat est esse non sit ipsum. Velit minim id sunt sunt ex aliqua officia deserunt dolor adipisicng incididunt ad. Culpa nostrud do sunt quis aliqua duis. Proident ullamco quis do quis irure excepteur ullamco.`,
-    post_image: 'images/post-image-default.jpg',
+    post_image: 'images/post-image-1',
     user_id: 1
   },
   {
@@ -58,7 +58,7 @@ const postData = [
     Proident elit cupidatat veniam mollit ipsum cillum pariatur. Aliqua ullamco consectetur officia culpa cupidatat consectetur nisi occaecat enim Lorem pariatur magna mollit ut. Ut magna sunt amet aute fugiat. Laboris fugiat minim duis ad sit consequat voluptate non veniam laboris ullamco eu. Mollit aute est elit et amet consectetur sit amet laboris consequat nisi laborum ipsum.
 
     Laboris commodo id duis voluptate do fugiat quis aliqua. Duis commodo sit officia occaecat est esse non sit ipsum. Velit minim id sunt sunt ex aliqua officia deserunt dolor adipisicng incididunt ad. Culpa nostrud do sunt quis aliqua duis. Proident ullamco quis do quis irure excepteur ullamco.`,
-    post_image: 'images/post-image-default.jpg',
+    post_image: 'images/post-image-3.jpg',
     user_id: 2
   },
   {
@@ -73,7 +73,7 @@ const postData = [
     Proident elit cupidatat veniam mollit ipsum cillum pariatur. Aliqua ullamco consectetur officia culpa cupidatat consectetur nisi occaecat enim Lorem pariatur magna mollit ut. Ut magna sunt amet aute fugiat. Laboris fugiat minim duis ad sit consequat voluptate non veniam laboris ullamco eu. Mollit aute est elit et amet consectetur sit amet laboris consequat nisi laborum ipsum.
 
     Laboris commodo id duis voluptate do fugiat quis aliqua. Duis commodo sit officia occaecat est esse non sit ipsum. Velit minim id sunt sunt ex aliqua officia deserunt dolor adipisicng incididunt ad. Culpa nostrud do sunt quis aliqua duis. Proident ullamco quis do quis irure excepteur ullamco.`,
-    post_image: 'images/post-image-default.jpg',
+    post_image: 'images/post-image-1.jpg',
     user_id: 2
   },
   {
@@ -87,7 +87,7 @@ const postData = [
     Proident elit cupidatat veniam mollit ipsum cillum pariatur. Aliqua ullamco consectetur officia culpa cupidatat consectetur nisi occaecat enim Lorem pariatur magna mollit ut. Ut magna sunt amet aute fugiat. Laboris fugiat minim duis ad sit consequat voluptate non veniam laboris ullamco eu. Mollit aute est elit et amet consectetur sit amet laboris consequat nisi laborum ipsum.
 
     Laboris commodo id duis voluptate do fugiat quis aliqua. Duis commodo sit officia occaecat est esse non sit ipsum. Velit minim id sunt sunt ex aliqua officia deserunt dolor adipisicng incididunt ad. Culpa nostrud do sunt quis aliqua duis. Proident ullamco quis do quis irure excepteur ullamco.`,
-    post_image: 'images/post-image-default.jpg',
+    post_image: 'images/post-image-4',
     user_id: 3
   }
 ];

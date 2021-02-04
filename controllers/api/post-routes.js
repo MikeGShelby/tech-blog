@@ -15,7 +15,6 @@ router.get('/', (req, res) => {
         [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
       ],
       include: [
-        // include the Comment model here:
         {
           model: Comment,
           attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
@@ -85,6 +84,7 @@ router.post('/', withAuth, (req, res) => {
     Post.create({
       title: req.body.title,
       post: req.body.post,
+      post_image: req.body.post_image,
       user_id: req.session.user_id
     })
       .then(dbPostData => res.json(dbPostData))
