@@ -177,7 +177,7 @@ form label {
   color: white;
 }
 
-.post-card-user {
+.post-card-user-dashboard {
   display: flex;
   color: rgb(90, 89, 89);
   background-color:white;
@@ -187,23 +187,21 @@ form label {
   width: 70vw;
 }
 
-/**** */
 
-
-.post-image-section-user {
+/* .post-image-section-user {
   overflow: hidden;
   width: 250px;
-}
+} */
 
-.post-card-image-user {
+/* .post-card-image-user {
   width: 100%;
   height: 100%;
   transform: scale(1);
   transition: transform .4s ease-in;
   object-fit: cover;
-}
+} */
 
-.post-card:hover .post-card-image {
+/* .post-card:hover .post-card-image {
   transform: scale(1.2);
 }
 
@@ -213,9 +211,9 @@ form label {
   overflow: hidden;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-}
+} */
 
-.post-card-text h3 {
+/* .post-card-text h3 {
   font-weight: 700;
 }
 
@@ -223,16 +221,10 @@ form label {
   grid-area: user;
   padding: 20px 20px;
   /* border-top: solid 1px #174986; */
-}
 
-.date-posted {
-  font-family: none;
-  font-weight: lighter;
-  font-style: italic;
-  margin-bottom: 500px;
-}
 
-/**** */
+
+
 
 
 
@@ -331,7 +323,6 @@ button:hover {
 .post-card-user {
   grid-area: user;
   padding: 20px 20px;
-  /* border-top: solid 1px #174986; */
 }
 
 .date-posted {
