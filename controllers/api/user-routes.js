@@ -59,12 +59,20 @@ router.get('/:id', (req, res) => {
 
 // POST /api/users (create new user)
 router.post('/', (req, res) => {
+
+    // Function to generate random number
+    const randomNumber = (min, max) => {
+      return Math.floor(Math.random() * (max - min) + min);
+    }
+
+    const randomImageNumber = randomNumber(1, 45);
+
     // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
     User.create({
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
-      user_image: 'images/default-user-image.jpg'
+      user_image: `images/avatars/avatar-${randomImageNumber}.jpg`
     })
     .then(dbUserData => {
       req.session.save(() => {

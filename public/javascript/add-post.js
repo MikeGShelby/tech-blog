@@ -1,5 +1,3 @@
-
-
 async function newFormHandler(event) {
     event.preventDefault();
 
@@ -8,7 +6,7 @@ async function newFormHandler(event) {
       return Math.floor(Math.random() * (max - min) + min);
     }
 
-    const randomImageNumber = randomNumber(1, 5);
+    const randomImageNumber = randomNumber(1, 7);
 
     const title = document.querySelector('input[name="post-title"]').value;
     const post = document.querySelector('textarea[name="post-body"]').value;
