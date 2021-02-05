@@ -9,26 +9,44 @@ body, html {
   color: #333;
 }
 
+body {
+  background: rgb(240,240,240);
+  background: radial-gradient(circle, rgba(240,240,240,1) 0%, rgba(230,230,230,1) 100%);
+}
+
 .wrapper {
   width: 100%;
   min-height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 
 /* HEADER FOR ALL PAGES */
 header {
-  border-bottom: 1px solid #ccc;
+  background: rgb(45,45,45);
+  background: radial-gradient(circle, rgba(45,45,45,1) 0%, rgba(29,29,29,1) 56%, rgba(36,36,36,1) 100%);
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1%;
+  padding: 1% 5%;
+  /* font-family:var(--header-font); */
 }
 
-header h1 {
-  font-size: 1em;
+.logo-container {
+  border: 3px solid white;
+  padding: 10px;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  margin: 0;
+  /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+.logo-container:hover {
+  background-color:rgba(209, 206, 206, .2);
+  color: rgb(99, 230, 223);
 }
 
 /* MAIN BODY FOR ALL PAGES */
@@ -42,8 +60,8 @@ main {
   width: 30px;
 }
 a {
+  color: white;
   text-decoration: none;
-  color: #225ca3;
   font-weight: bold;
   transition: color .1s;
 }
@@ -91,7 +109,7 @@ button:hover {
 .post-card {
   display: grid;
   grid-template-columns:330px;
-  grid-template-rows: 210px 180px 100px;
+  grid-template-rows: 210px 180px 120px;
   grid-template-areas:"image" "text" "user";
   color: rgb(90, 89, 89);
   background-color:white;
@@ -135,8 +153,17 @@ button:hover {
 
 .post-card-user {
   grid-area: user;
-  padding: 30px 20px;
+  padding: 20px 20px;
+  /* border-top: solid 1px #174986; */
 }
+
+.date-posted {
+  font-family: none;
+  font-weight: lighter;
+  font-style: italic;
+  margin-bottom: 500px;
+}
+
 
 /* SINGLE-POST PAGE */
 
@@ -202,6 +229,10 @@ form label {
 .post-full {
   margin-bottom: 2%;
   line-height: 150%;
+  padding: 2rem 2rem;
+  background-color: white;
+  box-shadow: 0px 3px 10px #00000029;
+  border-radius: .05rem;
 }
 
 .post-full .title span {
@@ -211,7 +242,9 @@ form label {
 }
 
 .post-text {
-white-space: pre-line;
+  white-space: pre-line;
+  font-size: 1.1rem;
+  line-height: 2rem;
 }
 
 .edit-link {
@@ -285,9 +318,24 @@ white-space: pre-line;
 }
 
 footer {
-  border-top: 1px solid #ccc;
+  background: rgb(45,45,45);
+  background: radial-gradient(circle, rgba(45,45,45,1) 0%, rgba(29,29,29,1) 56%, rgba(36,36,36,1) 100%);
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 1%;
+  height: 50vh;
   font-size: 110%;
+  color: white;
+}
+
+.login-button {
+  padding: 20px;
+  border: 3px solid white;
+}
+
+.login-button:hover {
+  background-color: rgb(177, 177, 177);
+
 }
