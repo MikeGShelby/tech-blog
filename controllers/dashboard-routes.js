@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+// GET all posts associated with the logged-in user
 router.get('/', withAuth, (req, res) => {
     Post.findAll({
       where: {
@@ -27,14 +28,23 @@ router.get('/', withAuth, (req, res) => {
         },
         {
           model: User,
-          attributes: ['username', 'user_image']
+          attributes: ['username', 'email', 'user_image']
         }
       ]
     })
       .then(dbPostData => {
         // serialize data before passing to template
         const posts = dbPostData.map(post => post.get({ plain: true }));
-        res.render('dashboard', { posts, loggedIn: true });
+
+        res.render('dashboard', {
+          posts,
+          username: req.session.username,
+          email: req.session.email,
+          user_image: req.session.user_image,
+          user_id: req.session.user_id,
+
+          loggedIn: true
+        });
       })
       .catch(err => {
         console.log(err);
@@ -42,6 +52,8 @@ router.get('/', withAuth, (req, res) => {
       });
 });
 
+
+// GET selected post for edit-post page
 router.get('/edit/:id', (req, res) => {
   Post.findOne({
     where: {

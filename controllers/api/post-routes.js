@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Post, User, Vote, Comment } = require('../../models');
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
+const {randomNumber} = require('../../utils/helpers');
 
 // get all posts
 router.get('/', (req, res) => {
@@ -84,8 +85,9 @@ router.post('/', withAuth, (req, res) => {
     Post.create({
       title: req.body.title,
       post: req.body.post,
-      post_image: req.body.post_image,
+      post_image: `images/post-image-${randomNumber(1,10)}.jpg`,
       user_id: req.session.user_id
+
     })
       .then(dbPostData => res.json(dbPostData))
       .catch(err => {

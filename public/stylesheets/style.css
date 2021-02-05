@@ -14,13 +14,6 @@ body {
   background: radial-gradient(circle, rgba(240,240,240,1) 0%, rgba(230,230,230,1) 100%);
 }
 
-.wrapper {
-  width: 100%;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 /* HEADER FOR ALL PAGES */
 header {
   background: rgb(45,45,45);
@@ -30,35 +23,147 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1% 5%;
-  /* font-family:var(--header-font); */
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.2rem;
 }
 
-.logo-container {
-  border: 3px solid white;
+.logo-button {
   padding: 10px;
-}
-
-.logo-text {
+  border: 3px solid white;
   font-size: 1.2rem;
   margin: 0;
-  /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 
-.logo-container:hover {
+.logo-button:hover {
+  background-color: rgb(177, 177, 177);
   background-color:rgba(209, 206, 206, .2);
   color: rgb(99, 230, 223);
 }
 
+
 /* MAIN BODY FOR ALL PAGES */
 main {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* LOGIN PAGE */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:50px;
 }
 
 
-/* USER DATA */
+.login-form, .signup-form, .user-profile-form {
+  background-color: rgb(253, 253, 253);
+  padding: 50px 40px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+  min-width: 30vw;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-items: stretch;
+  align-items: center;
+}
+
+.login-form h3, .signup-form h3, .user-profile-form h3 {
+  font-size: 1.4rem;
+  font-family: var(--cta-font);
+}
+
+.login-form > div, .signup-form > div, .user-profile-form > div {
+  padding: 10px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-items: stretch;
+}
+
+.login-form input, .signup-form input, .user-profile-form input {
+  color: rgb(59, 59, 59);
+  font-size: 1.06rem;
+  border: 2px solid rgb(219, 219, 219);
+  padding: 15px;
+  border-radius: 3px;
+  min-width: 20rem;
+}
+
+input:focus {
+  outline: none;
+  border: 3px solid #3486eb;
+}
+
+.login-form button, .signup-form button, .user-profile-form button {
+  font-size: 1.06rem;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  padding: 15px;
+  background: linear-gradient(343deg, rgba(64,222,169,1) 0%, rgba(51,187,142,1) 100%);
+  min-width: 20rem;
+  transform: scale(1);
+  transition: background-image 1s, transform .5s;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.login-form button:hover, .signup-form button:hover, .user-profile-form button:hover {
+  background: linear-gradient(343deg, rgba(62,189,146,1) 0%, rgba(29,112,85,1) 100%);
+  transform: scale(1.1);
+}
+
+form label {
+  display: block;
+}
+
+
+/* DASHBOARD */
+.user-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 3px 10px #00000029;
+  padding: 5% 5%;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+/* Reduce user details padding on larger screens */
+@media screen and (min-width: 600px) {
+  .user-details-container {
+    padding: 1.5% 5%;
+  }
+
+}
+
 .user-image {
   width: 30px;
 }
+
+.user-image-dashboard-container {
+  contain:content;
+  padding: 0px 20px 0px 0px;
+}
+
+.user-image-dashboard {
+  background-color: rgb(110, 216, 235);
+  padding: 10px;
+  border-radius: 50%;
+  width: 100px;
+
+}
+
+.details-label {
+  font-weight: bold;
+}
+
+
 a {
   color: white;
   text-decoration: none;
@@ -166,7 +271,6 @@ button:hover {
 
 
 /* SINGLE-POST PAGE */
-
 textarea, input {
   padding: .5%;
   border-radius: 5px;
@@ -201,8 +305,7 @@ form label {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
-  font-size: 100%;
+  font-size: 94%;
   font-weight: bold;
   transition: color .1s;
   margin-left: 16px;
@@ -330,12 +433,17 @@ footer {
   color: white;
 }
 
-.login-button {
+.footer-cta {
+  font-size: 1.7rem;
+}
+
+.footer-button {
   padding: 20px;
   border: 3px solid white;
 }
 
-.login-button:hover {
+.footer-button:hover {
   background-color: rgb(177, 177, 177);
-
+  background-color:rgba(209, 206, 206, .2);
+  color: rgb(99, 230, 223);
 }

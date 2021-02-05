@@ -25,12 +25,12 @@
   <div class="wrapper">
      <header>
 
-        <a class="logo-container" href="/"><h1 class="logo-text">TECH<br> BLOG</h1></a>
+      <a class="logo-button" href="/">TECH<br> BLOG</TECH></a>
 
       <nav>
         {{#if loggedIn}}
-          <a href="/dashboard">dashboard</a>
-          <button id="logout" class="btn-no-style">log Out</button>
+          <a href="/dashboard">Dashboard</a>
+          <button id="logout" class="btn-no-style">Log Out</button>
         {{else}}
           <a href="/login">Log In</a>
         {{/if}}
@@ -42,12 +42,12 @@
     </main>
 
     <footer>
-      <h3>START POSTING</h3>
+      <h3 class="footer-cta">START POSTING</h3>
 
       {{#if loggedIn}}
-          <a href="/dashboard">NEW POST</a>
+          <a class="footer-button" href="/dashboard">ADD NEW POST</a>
       {{else}}
-          <a class="login-button" href="/login">LOG IN</a>
+          <a class="footer-button" href="/login">LOG IN</a>
       {{/if}}
 
     </footer>

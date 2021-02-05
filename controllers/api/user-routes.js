@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Post, Vote, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
+const {randomNumber} = require('../../utils/helpers');
 
 // GET /api/users (get all users)
 router.get('/', (req, res) => {
@@ -59,25 +60,19 @@ router.get('/:id', (req, res) => {
 
 // POST /api/users (create new user)
 router.post('/', (req, res) => {
-
-    // Function to generate random number
-    const randomNumber = (min, max) => {
-      return Math.floor(Math.random() * (max - min) + min);
-    }
-
-    const randomImageNumber = randomNumber(1, 45);
-
     // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
     User.create({
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
-      user_image: `images/avatars/avatar-${randomImageNumber}.jpg`
+      user_image: `images/avatars/avatar-${randomNumber(1,45)}.png`
     })
     .then(dbUserData => {
       req.session.save(() => {
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
+        req.session.email = dbUserData.email;
+        req.session.user_image = dbUserData.user_image;
         req.session.loggedIn = true;
 
         res.json(dbUserData);
@@ -112,6 +107,8 @@ router.post('/login', (req, res) => {
       // declare session variables
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
+      req.session.email = dbUserData.email;
+      req.session.user_image = dbUserData.user_image;
       req.session.loggedIn = true;
 
       res.json({ user: dbUserData, message: 'You are now logged in!' });

@@ -3,12 +3,9 @@ module.exports = {
       const monthNames = ["January", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December"];
 
-    const d = new Date(date);
-    // document.write("The current month is " + monthNames[d.getMonth()]);
+      const d = new Date(date);
 
-    return `${monthNames[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
-
-      // return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(date).getFullYear()}`;
+      return `${monthNames[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
     },
     format_plural: (word, amount) => {
         if (amount !== 1) {
@@ -24,5 +21,8 @@ module.exports = {
           .replace('www.', '')
           .split('/')[0]
           .split('?')[0];
+    },
+    randomNumber: (min, max) => {
+      return Math.floor(Math.random() * (max - min) + min);
     }
 }
