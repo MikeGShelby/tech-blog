@@ -123,6 +123,7 @@ form label {
 
 
 /* DASHBOARD */
+/* User Info */
 .user-details-container {
   display: flex;
   flex-wrap: wrap;
@@ -161,6 +162,12 @@ form label {
   font-weight: bold;
 }
 
+/* New Posts */
+.new-post-form input {
+  width: 300px;
+}
+
+/* Your Posts */
 .post-card-dashboard {
   display: flex;
   flex-wrap: wrap;
@@ -265,7 +272,7 @@ button:hover {
 .post-card {
   display: grid;
   grid-template-columns:330px;
-  grid-template-rows: 210px 180px 120px;
+  grid-template-rows: 200px 160px 150px;
   grid-template-areas:"image" "text" "user";
   color: rgb(90, 89, 89);
   background-color:white;
@@ -299,6 +306,7 @@ button:hover {
   grid-area: text;
   padding: 0px 20px;
   overflow: hidden;
+  font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
@@ -319,6 +327,46 @@ button:hover {
   margin-bottom: 500px;
 }
 
+/* POSTS */
+.post-header-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: solid 3px rgb(142, 182, 187);
+}
+
+.post-title {
+  font-size: 2rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.post-full {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+  line-height: 150%;
+  padding: 2rem 2rem;
+  background-color: white;
+  box-shadow: 0px 3px 10px #00000029;
+  border-radius: .05rem;
+}
+
+.post-full .post-title span {
+  font-style: italic;
+  font-size: 90%;
+  color: #7d7d7d;
+}
+
+.post-text {
+  white-space: pre-line;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
 
 /* SINGLE-POST PAGE */
 textarea, input {
@@ -373,54 +421,6 @@ form label {
   color: #3486eb;
 }
 
-.delete-post-btn {
-  background-color: #d41414;
-}
-
-.delete-post-btn:hover {
-  background-color: #ff643d;
-}
-
-/* POSTS */
-
-.post-header-section {
-  margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: solid 3px rgb(142, 182, 187);
-}
-
-.post-title {
-  font-size: 2rem;
-  margin: 1rem 0;
-  font-weight: bold;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.post-image {
-  width: 100%;
-}
-
-.post-full {
-  margin-bottom: 2%;
-  line-height: 150%;
-  padding: 2rem 2rem;
-  background-color: white;
-  box-shadow: 0px 3px 10px #00000029;
-  border-radius: .05rem;
-}
-
-.post-full .post-title span {
-  font-style: italic;
-  font-size: 90%;
-  color: #7d7d7d;
-}
-
-.post-text {
-  white-space: pre-line;
-  font-size: 1.1rem;
-  line-height: 2rem;
-}
-
 .upvote-btn {
   background-color: #197d0f;
   transition: background-color .1s;
@@ -428,6 +428,45 @@ form label {
 
 .upvote-btn:hover {
   background-color: #1f9c13;
+}
+
+/* EDIT POST PAGE */
+.post-form {
+  display: flex;
+  background-color: rgb(253, 253, 253);
+  border-radius: 3px;
+  min-width: 30vw;
+  /* padding: 50px 40px;
+  margin: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: stretch;
+  align-items: center;
+}
+
+.post-form > div {
+  padding: 10px;
+  border-radius: 2px;
+  flex-direction: column;
+  justify-items: stretch;
+}
+
+.post-form input, .post-form textarea {
+  color: rgb(59, 59, 59);
+  font-size: 1.06rem;
+  border: 2px solid rgb(219, 219, 219);
+  padding: 15px;
+  border-radius: 3px;
+  min-width: 20rem;
+  width: 100%;
+}
+
+.delete-post-btn {
+  background-color: #d41414;
+}
+
+.delete-post-btn:hover {
+  background-color: #ff643d;
 }
 
 /* USER COMMENTS */
@@ -474,14 +513,6 @@ form label {
   font-size: 90%;
   margin-bottom: .5%;
   opacity: .6;
-}
-
-.new-post-form input {
-  width: 300px;
-}
-
-.edit-post-form {
-  margin-bottom: 5%;
 }
 
 footer {

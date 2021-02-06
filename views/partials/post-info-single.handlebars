@@ -14,11 +14,4 @@
     <div class="post-text">
       {{post}}
     </div>
-
-    <div class="meta">
-      {{vote_count}} {{format_plural "like" vote_count}} by
-      <img class="user-image" src="/{{user.user_image}}">
-      |
-      <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-    </div>
 </article>

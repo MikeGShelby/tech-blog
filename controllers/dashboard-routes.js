@@ -10,6 +10,7 @@ router.get('/', withAuth, (req, res) => {
         // use the ID from the session
         user_id: req.session.user_id
       },
+      order: [['created_at', 'DESC']],
       attributes: [
         'id',
         'title',
@@ -62,8 +63,9 @@ router.get('/edit/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'post',
       'title',
+      'post',
+      'post_image',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
