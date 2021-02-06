@@ -1,11 +1,14 @@
-<a href="/post/{{id}}" class="post-card-user">
-  <div class="post-image-section-user">
-    <img src="{{post_image}}" class="post-card-image-user">
-    <img src="images/post-image-9.jpg" class="post-card-image">
-  </div>
+<li class="post-card-dashboard">
 
-  <div class="post-card-text-user">
-    <h3 class="post-title-user">{{title}}</h3>
-    <span class="date-posted">Posted on {{format_date created_at}}</span>
-  </div>
-</a>
+  <a href="/dashboard/edit/{{id}}" class="edit-link">Edit post</a>
+
+  <a href="/post/{{id}}" class="dashboard-post-section">
+    <img src="{{post_image}}" class="post-dashboard-image">
+
+    <div class="post-dashboard-text-section">
+      <h3 class="post-dashboard-title">{{title}}</h3>
+      <span class="date-posted">Posted on {{format_date created_at}}</span>
+    </div>
+  </a>
+
+</li>

@@ -8,36 +8,39 @@
   </div>
 </section>
 
+<section class="single-post-layout">
 
-<section>
-  <h2>Create New Post</h2>
+  <article class="post-full">
 
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-      <label for="post-body">Post</label>
-      <textarea type="text" id="post-body" name="post-body"></textarea>
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
+    <h2>Create New Post</h2>
+
+    <form class="new-post-form">
+      <div>
+        <label for="post-title">Title</label>
+        <input type="text" id="post-title" name="post-title" />
+      </div>
+      <div>
+        <label for="post-body">Post</label>
+        <textarea type="text" id="post-body" name="post-body"></textarea>
+      </div>
+      <button type="submit" class="btn">Create</button>
+    </form>
+  </article>
+
+  <div class="posts-list">
+    {{#if posts.length}}
+      <h2>Your Posts</h2>
+      <ol>
+        {{#each posts as |post|}}
+        {{!-- <li class="post-card-dashboard"> --}}
+          {{> post-info-dashboard post}}
+        {{!-- </li> --}}
+        {{/each}}
+      </ol>
+    {{/if}}
+  </div>
+
 </section>
-
-{{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li class="dashboard-post-item">
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit<br> post</a>
-      {{> post-info-dashboard post}}
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
 
 <script src="/javascript/add-post.js"></script>
 
