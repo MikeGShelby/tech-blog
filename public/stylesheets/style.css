@@ -382,6 +382,20 @@ form label {
 }
 
 /* POSTS */
+
+.post-header-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: solid 3px rgb(142, 182, 187);
+}
+
+.post-title {
+  font-size: 2rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .post-image {
   width: 100%;
 }
@@ -395,7 +409,7 @@ form label {
   border-radius: .05rem;
 }
 
-.post-full .title span {
+.post-full .post-title span {
   font-style: italic;
   font-size: 90%;
   color: #7d7d7d;
@@ -438,6 +452,7 @@ form label {
 }
 
 .comment {
+  background-color: white;
   margin-bottom: 1%;
   width: 100%;
   font-weight:lighter;
@@ -454,9 +469,6 @@ form label {
   white-space:pre-line;
 }
 
-.comment:nth-child(odd) {
-  background-color: #fff5eb;
-}
 
 .comment .meta {
   font-size: 90%;
