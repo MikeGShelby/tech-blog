@@ -233,6 +233,10 @@ a:hover {
   color: #3486eb;
 }
 
+.blue-link {
+color: rgb(32, 114, 151);
+}
+
 button {
   background-color: #174986;
   border: 0;
